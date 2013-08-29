@@ -1,0 +1,121 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #f5f5f5;
+    background-color: #eee;
+}
+
+.header {
+    height: 100px;
+    background-color: #1a587c;
+}
+
+.header h1 {
+    width: 580px;
+    margin: 0 auto;
+    padding-left: 80px;
+    color: white;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+    line-height: 100px;
+    background-image: url(../img/logo.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.info-bar {
+    background-color: #111;
+    background: linear-gradient(to top, #000, #111);
+    margin-bottom: 30px;
+    padding: 10px;
+    box-shadow: 0 2px 2px #aaa;
+    color: white;
+    position: relative;
+}
+
+.info-bar .container {
+    width: 640px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.info-bar .container .kernel {
+    float: left;
+}
+
+.info-bar .container .status {
+    float: right;
+}
+
+.info-bar .container .status.online {
+    color: #0f0;
+}
+
+.info-bar .container .status.offline {
+    color: #f00;
+}
+
+ul.tabs {
+    margin: 0 auto;
+    padding: 0;
+    width: 642px;
+    list-style: none;
+    overflow: hidden;
+    margin-bottom: -1px;
+}
+
+ul.tabs li {
+    background: linear-gradient(to top, #dfdfdf, #eeeeee);
+    color: #888;
+    margin: 0;
+    padding: 10px;
+    line-height: 20px;
+    float: left;
+    border: 1px solid #ddd;
+    border-left-width: 0;
+}
+
+ul.tabs li.active {
+    background: white;
+    color: black;
+    border-bottom-color: white;
+}
+
+ul.tabs li:first-child {
+    border-top-left-radius: 5px;
+    border-left-width: 1px;
+}
+
+ul.tabs li:last-child {
+    border-top-right-radius: 5px;
+}
+
+.content {
+    width: 600px;
+    background-color: white;
+    border: 1px solid #ddd;
+    margin: 0 auto 50px auto;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.content .row {
+    margin: 0 2%;
+    height: 50px;
+    line-height: 50px;
+}
+
+.content .row i {
+    text-shadow: 1px 1px #eee;
+}
+
+.content .row .right {
+    display: block;
+    float: right;
+}
+
+.content .row .error {
+    color: #ee0000;
+}

@@ -1,0 +1,3 @@
+[submodule "server/twspy"]
+	path = server/twspy
+	url = git@github.com:taddeus/twspy.git
