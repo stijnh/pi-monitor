@@ -6,6 +6,10 @@ html, body {
     background-color: #eee;
 }
 
+body {
+    min-width: 660px;
+}
+
 .header {
     height: 100px;
     background-color: #1a587c;
@@ -102,21 +106,56 @@ ul.tabs li:last-child {
     overflow: hidden;
 }
 
-.content .row {
+.row {
     margin: 0 2%;
     height: 50px;
     line-height: 50px;
 }
 
-.content .row i {
+.row i {
     text-shadow: 1px 1px #eee;
 }
 
-.content .row .right {
+.row .right {
     display: block;
     float: right;
 }
 
-.content .row .error {
+.row .error {
     color: #ee0000;
+}
+
+.service {
+    padding: 8px;
+}
+
+.service:nth-child(2n) {
+    background-color: #eeeeee;
+}
+
+.service:hover {
+    background-color: #ffff55;
+}
+
+.service:nth-child(2n):hover {
+    background-color: #ffff11;
+}
+
+.service span {
+    display: block;
+    float: right;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8em;
+    background-color: #aaaaaa;
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+
+.service span.online {
+    background-color: #00cc00;
+}
+
+.service span.offline {
+    background-color: #cc0000;
 }

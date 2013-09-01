@@ -15,7 +15,7 @@ if ($data !== null) {
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Raspberry pi</title>
-        <link href="css/style.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
         <link href="css/font-awesome.min.css" rel="stylesheet">
     </head>
     <body>
@@ -50,13 +50,13 @@ if ($data !== null) {
               <div class="row">
                   <i class="icon-th-list"></i> Memory
                       <div class="right">
-                          <span id="status-memory-used"></span> / <span id="status-memory-total"></span>
+                          <span id="status-memory-used"></span> / <span id="status-memory-total"></span> (<span id="status-memory-percent"></span>)
                       </div>
               </div>
               <div class="row">
                   <i class="icon-hdd"></i> Storage
                   <div class="right">
-                      <span id="status-storage-used"></span> / <span id="status-storage-total"></span>
+                      <span id="status-storage-used"></span> / <span id="status-storage-total"></span> (<span id="status-storage-percent"></span>)
                   </div>
               </div>
               <div class="row">

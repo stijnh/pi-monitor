@@ -108,8 +108,8 @@ var connect = function(addr) {
         memory: function(data) {
             $('#status-memory-used').html(formatBytes(data.used, 2));
             $('#status-memory-total').html(formatBytes(data.total, 2));
-            $('#status-memory-percent').html(formatBytes(
-                    data.used / data.total, 2));
+            $('#status-memory-percent').html(Math.round(data.used
+                        / data.total * 100) + '%');
 
             var now = new Date().getTime();
             memorySeries.push(data, [now, data.used / data.total * 100]);
@@ -119,8 +119,8 @@ var connect = function(addr) {
         storage: function(data) {
             $('#status-storage-used').html(formatBytes(data.used, 2));
             $('#status-storage-total').html(formatBytes(data.total, 2));
-            $('#status-storage-percent').html(formatBytes(
-                    data.used / data.total, 2));
+            $('#status-storage-percent').html(Math.round(data.used
+                        / data.total * 100) + '%');
         },
         cpu: function(data) {
             $('#status-cpu').html(data.toFixed(2) + '%');
@@ -142,16 +142,20 @@ var connect = function(addr) {
 
             $.each(data, function(i, v) {
                 if (v.status == '+') {
-                    var icon = 'ok'
+                    var text = 'Running'
+                    var type = 'online';
                 } else if(v.status == '-') {
-                    var icon = 'remove';
+                    var text = 'Stopped';
+                    var type = 'offline';
                 } else {
-                    var icon = 'question';
+                    var text = 'Unknown';
+                    var type = 'unknown';
                 }
 
                 $('<div>')
-                    .addClass('row')
+                    .addClass('service')
                     .html(v.name)
+                    .append($('<span>').html(text).addClass(type))
                     .appendTo('#services');
             });
         }
