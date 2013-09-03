@@ -9,7 +9,7 @@ import sys
 import threading
 import time
 
-import twspy
+import wspy
 
 
 class Heartbeat(threading.Thread):
@@ -52,7 +52,7 @@ class Heartbeat(threading.Thread):
                 except Exception as e:
                     logging.info("failed to fetch '%s':\n%s", k, e)
 
-            msg = twspy.TextMessage(json.dumps(data))
+            msg = wspy.TextMessage(json.dumps(data))
             print data
 
             for client in set(self.clients):
@@ -119,7 +119,7 @@ class Heartbeat(threading.Thread):
         return re.search("inet addr:([0-9.]+)", s).group(1)
 
 
-class Server(twspy.Server):
+class Server(wspy.Server):
     def __init__(self, *args, **kwargs):
         super(Server, self).__init__(*args, **kwargs)
         self.thread = None
