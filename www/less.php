@@ -13,7 +13,8 @@ if (empty($_SERVER['PATH_INFO'])) {
     error('No file given');
 }
 
-$path = realpath(__DIR__ . $_SERVER['PATH_INFO']);
+$base = __DIR__ . '/less.php/';
+$path = realpath($base . $_SERVER['PATH_INFO']);
 
 if ($path === false) {
     error('File not found');
@@ -23,7 +24,7 @@ if (!preg_match('/\.less$/i', $path)) {
     error('File not a .less file');
 }
 
-if (strpos($path, __DIR__) !== 0) {
+if (strpos($path, $base) !== 0) {
     error('Invalid directory');
 }
 

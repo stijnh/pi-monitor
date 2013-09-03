@@ -15,7 +15,7 @@ if ($data !== null) {
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Raspberry pi</title>
-        <link href="css/main.css" rel="stylesheet">
+        <link href="less.php/main.less" rel="stylesheet">
         <link href="css/font-awesome.min.css" rel="stylesheet">
     </head>
     <body>
