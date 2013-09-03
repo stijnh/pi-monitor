@@ -53,7 +53,6 @@ class Heartbeat(threading.Thread):
                     logging.info("failed to fetch '%s':\n%s", k, e)
 
             msg = wspy.TextMessage(json.dumps(data))
-            print data
 
             for client in set(self.clients):
                 try:
