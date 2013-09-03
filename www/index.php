@@ -30,7 +30,7 @@ if ($data !== null) {
         </div>
         <ul class="tabs">
             <li class="active" id="tab-overview"><i class="icon-home"></i> Overview</li>
-            <li id="tab-graphs"><i class="icon-dashboard"></i> Graphs</li>
+            <li id="tab-graphs"><i class="icon-dashboard"></i> Graph</li>
             <li id="tab-services"><i class="icon-tasks"></i> Services</li>
         </ul>
         <div class="content">
@@ -67,8 +67,7 @@ if ($data !== null) {
               </div>
             </div>
             <div id="page-graphs" style="display: none;">
-                <canvas id="graph-cpu" width="600" height="200"></canvas>
-                <canvas id="graph-memory" width="600" height="200"></canvas>
+                <canvas id="graph" width="600" height="350"></canvas>
             </div>
             <div id="page-services" style="display: none;">
               <div id="services"></div>
@@ -81,6 +80,7 @@ if ($data !== null) {
         <script type="text/javascript">
             $(function() {
                 initTabs();
+                initGraph();
                 connect("ws://<?php echo $ip; ?>:8080");
             });
         </script>
